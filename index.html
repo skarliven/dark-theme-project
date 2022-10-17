@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Violin Lessons | Add-on Project</title>
+
+</head>
+<body>
+    <a href="https://www.musicwithskarli.com/" target="_blank">
+        <img src="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/001/original/logo.png?1627901693" class="logo" alt="SheCodes Logo">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/127/original/logo-white.png?1663066816" class="logo-light" alt="SheCodes Logo">
+      </a>
+      <button id="change-theme-button" class="change-theme-button">
+        Change theme
+      </button>
+    <div class="container">
+        <h1>
+            🎻 Learn Violin
+        </h1>
+
+        <h2>My favorite hobby</h2>
+        <a href="https://www.shecodes.io/" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/102/original/4.png?1666042118" class="violin-picture" alt="Skarli playing violin">
+        </a>
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/987/original/1.png?1665985749" class="picture-grid" alt="Skarli teaching violin">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/101/original/3.png?1666042105" class="picture-grid" alt="Skarli teaching violin">
+      
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/986/original/IMG_3024.jpeg?1665985691" class="picture-grid" alt="Vijay playing at the recital">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/983/original/Untitled_design.png?1665985564" class="picture-grid" alt="Skarli with her students">
+        </div>
+        <div class="description">
+            <p>Hello! Thanks for stopping by.  Let me tell you a little bit about myself and my studio.  I love music with my whole heart and I want to share my joy and expertise with you!<br>
+                When you sign up for violin lessons, or early childhood music classes with me, you can expect a fun, challenging, stimulating experience at each and every lesson. <br>
+                I tailor your lessons individually, working with your strengths to help you make real musical progress.  I have 15 years of teaching experience, both as a private music teacher and also as a classroom teacher in San Francisco private schools. 
+            </p>
+          </div>
+        
+        <button id="signUp" class="signUp">Claim your 20 min free Trial 🎻 lesson</button>
+        <footer>Coded with 💜 by Skarli Pena 💻</footer>
+    </div>
+
+    <script>
+        function signup() {
+          let quanty = prompt("Have you play Violin before?");
+          let name = prompt("What is your first name?");
+          let email = prompt("What is your email?");
+    
+          alert(
+            "Thanks " +
+            name +
+            "! We'll be in touch soon with more details. Feel free to contact us if you have any questions musicwitskarli@gmail.com"
+            );
+        }
+    
+        function toggleTheme() {
+          if (theme === "light") {
+            theme = "dark";
+            document.querySelector("body").classList.add("dark");
+          } else {
+            theme = "light";
+            document.querySelector("body").classList.remove("dark");
+          }
+        }
+    
+    
+    
+        let button = document.querySelector("#signUp");
+        button.addEventListener("click", signup);
+    
+    
+    
+        let theme = "dark";
+        let themeButton = document.querySelector("#change-theme-button");
+        themeButton.addEventListener("click", toggleTheme)
+      </script>
+
+</body>
+</html>
