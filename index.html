@@ -6,12 +6,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Violin Lessons | Add-on Project</title>
+<style>
+
+
+body {
+    color: #172c66;
+    font-family: "Cerebri Sans";
+    background-color: #faeee7;
+    /* background-image: radial-gradient(#bdbfe3 0.5px, #faeee7 0.5px); */
+    background-size: 10px 10px;
+  }
+  
+  body.dark {
+  
+    background-image: radial-gradient(#271d3c 0.5px, #121629 0.5px);
+  }
+  
+  .change-theme-button {
+    text-align: center;
+  }
+  
+  body.dark .container{
+    background:  #232946;
+  }
+  
+  body.dark h2, body.dark p, body.dark footer{
+    color:  #d3cde0;
+  }
+  
+  
+  h1,
+  h2 {
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+  }
+  
+  h1 {
+    color: #272142;
+    font-size: 38px;
+    line-height: 48px;
+  }
+  body.dark h1 {
+    color: #d3cde0;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #272142;
+    font-family: "PT Mono", monospace;
+    line-height: 27px;
+  }
+  
+  a {
+    color: #885df1;
+  }
+  
+  body.dark a {
+    color: #d3cde0;
+  }
+  
+  a:hover {
+    color: #9d88ca;
+    text-decoration: none;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  
+  img {
+    border-radius: 12px;
+    max-width: 100%;
+  
+  }
+  
+  body.dark .change-theme-button {
+    background: #1c1824;
+    color: #fff;
+  }
+  
+  body.dark .change-theme-button:hover {
+    background: #885df1;
+  }
+  
+  .change-theme-button {
+    display: block;
+    background: #ff8ba7;
+    color: white;
+    font-size: 16px;
+    font-family: "Cerebri Sans";
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    margin:  0 auto;
+  }
+  
+  .change-theme-button:hover {
+    opacity: 90%;
+    background: #fff;
+    color: #885df1 ;
+    border: 1px solid #885df1;
+  }
+  
+  body.dark .change-theme-button:hover {
+    opacity: .9;
+  }
+  
+  .signUp {
+    background: #ff8ba7;;
+    color: white;
+    display: block;
+    margin: 30px auto;
+    width: 90%;
+    border-radius: 50px;
+    border: none;
+    font-size: 18px;
+    font-family: "Cerebri Sans";
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    border:  1px solid transparent;
+  }
+  
+  .signUp:hover {
+    opacity: 90%;
+    background: #fff;
+    color: #885df1 ;
+    border: 1px solid #885df1;
+  }
+
+  
+  
+ footer {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-family: "PT Mono", monospace;
+  }
+  
+  .container {
+    box-shadow: 0px 30px 50px rgba(57, 48, 90, 0.1);
+    margin: 50px auto;
+    background: #ffc6c7;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 16px;
+  }
+  
+  body.dark .container {
+    box-shadow: 0px 30px 50px rgba(4, 2, 12, 0.5);
+  }
+  
+  .description {
+    padding-bottom: 20px;
+  }
+  
+  .logo,
+  .logo-light {
+    max-width: 200px;
+    display: block;
+    margin: 40px auto;
+  }
+  
+  .logo-light {
+    display: none;
+  }
+  
+  body.dark .logo-light {
+    display: block;
+  }
+  body.dark .logo {
+    display: none;
+  }
+  
+  .violin-picture {
+    margin: 15px 0;
+    background-origin: 10px 10px;
+    transition:  all 150ms ease-in-out;;
+  
+  }
+  
+  .violin-picture:hover {
+    transform: scale(1.5);
+  
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:  20px;
+  }
+  
+  .grid img {
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+  }
+  
+</style>
 
 </head>
 <body>
     <a href="https://www.musicwithskarli.com/" target="_blank">
-        <img src="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/001/original/logo.png?1627901693" class="logo" alt="SheCodes Logo">
-        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/127/original/logo-white.png?1663066816" class="logo-light" alt="SheCodes Logo">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/126/original/17.png?1666056374" class="logo" alt="Music Lessons Logo">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/127/original/18.png?1666056382" class="logo-light" alt="Music Lessons Logo">
       </a>
       <button id="change-theme-button" class="change-theme-button">
         Change theme
@@ -22,7 +227,7 @@
         </h1>
 
         <h2>My favorite hobby</h2>
-        <a href="https://www.shecodes.io/" target="_blank">
+        <a href="https://www.musicwithskarli.com/" target="_blank">
             <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/102/original/4.png?1666042118" class="violin-picture" alt="Skarli playing violin">
         </a>
         <div class="grid">
